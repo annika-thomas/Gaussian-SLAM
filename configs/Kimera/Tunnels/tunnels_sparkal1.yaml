@@ -1,0 +1,73 @@
+inherit_from: configs/Kimera/kimera.yaml
+input_path: /media/annika/Extreme SSD/Kimera-Multi/data/tunnels/sparkal1
+output_path: /media/annika/Extreme SSD/output/Gaussian-SLAM/Kimera/tunnles/sparkal1
+project_name: "Gaussian_SLAM_kimera"
+dataset_name: "kimera"
+checkpoint_path: null
+use_wandb: True
+seed: 0
+scene_name: "sparkal1"
+use_train_split: False
+frame_limit: -1
+H: 480  # Assuming height based on your provided data
+W: 640  # Assuming width based on your provided data
+fx: 380.8096923828125
+fy: 380.5378723144531
+cx: 315.84698486328125
+cy: 238.04495239257812
+depth_scale: 1000.0
+
+data:
+  input_path: /media/annika/Extreme SSD/Kimera-Multi/data/tunnels/sparkal1
+  output_path: /media/annika/Extreme SSD/output/Gaussian-SLAM/Kimera/tunnels/sparkal1
+  scene_name: "sparkal1"
+  use_train_split: True
+  frame_limit: -1
+mapping:
+  new_submap_every: 10
+  map_every: 5
+  iterations: 200
+  new_submap_iterations: 500
+  new_submap_points_num: 500000
+  new_submap_gradient_points_num: 50000 
+  new_frame_sample_size: 150000
+  new_points_radius: 0.001
+  current_view_opt_iterations: 0.5
+  alpha_thre: 0.5
+  pruning_thre: 0.5
+  submap_using_motion_heuristic: False
+tracking:
+  gt_camera: True
+  w_color_loss: 0.5
+  iterations: 200
+  cam_rot_lr: 0.002
+  cam_trans_lr: 0.01
+  odometry_type: "odometer"  # gt, const_speed, odometer
+  help_camera_initialization: False 
+  init_err_ratio: 50
+  odometer_method: "point_to_plane" # hybrid or point_to_plane
+  filter_alpha: True
+  filter_outlier_depth: True
+  alpha_thre: 0.98
+  soft_alpha: False
+  mask_invalid_depth: True
+cam:
+  crop_edge: 0
+  depth_scale: 1000.0
+  H: 480  # Assuming height based on your provided data
+  W: 640  # Assuming width based on your provided data
+  fx: 380.8096923828125
+  fy: 380.5378723144531
+  cx: 315.84698486328125
+  cy: 238.04495239257812
+  depth_scale: 1000.0
+
+distortion_coefficients:
+  d: [-0.054963257163763046, 0.06448927521705627, 0.00020229471556376666, 0.00045873370254412293, -0.02038593403995037]
+intrinsic_matrix:
+  k: [380.8096923828125, 0, 315.84698486328125, 0, 380.5378723144531, 238.04495239257812, 0, 0, 1]
+    # k: [380.8096923828125, 0, 315.84698486328125, 0, 380.5378723144531, 150, 0, 0, 1]
+rectification_matrix:
+  r: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  p: [380.8096923828125, 0, 315.84698486328125, 0, 0, 380.5378723144531, 238.04495239257812, 0, 0, 0, 1, 0]

@@ -8,7 +8,7 @@ mapping:
   new_submap_every: 50
   map_every: 5
   iterations: 100
-  new_submap_iterations: 1000
+  new_submap_iterations: 200
   new_submap_points_num: 600000 
   new_submap_gradient_points_num: 50000 
   new_frame_sample_size: -1 

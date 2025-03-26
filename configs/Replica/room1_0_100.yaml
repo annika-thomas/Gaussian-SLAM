@@ -1,0 +1,5 @@
+inherit_from: configs/Replica/replica.yaml
+data:
+  scene_name: room1_0_100
+  input_path: data_testing/Replica-SLAM/room1_0_100/
+  output_path: output/Replica/room1_0_100/
