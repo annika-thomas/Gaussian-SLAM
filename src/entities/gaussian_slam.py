@@ -131,8 +131,9 @@ class GaussianSLAM(object):
 
         for frame_id in range(len(self.dataset)):
 
-            if frame_id in [0, 1]:
-                estimated_c2w = self.dataset[frame_id][-1]
+            if frame_id in [0]:
+                # estimated_c2w = self.dataset[frame_id][-1]
+                estimated_c2w = np.eye(4)
             else:
                 estimated_c2w = self.tracker.track(
                     frame_id, gaussian_model,
