@@ -1,6 +1,6 @@
 inherit_from: configs/Kimera/kimera.yaml
-input_path: /media/annika/Extreme SSD/Kimera-Multi/data/outdoor/acl_jackal
-output_path: /media/annika/Extreme SSD/output/Gaussian-SLAM/Kimera/outdoor/acl_jackal
+input_path: /media/ameredit/Extreme SSD/Kimera-Multi/data/outdoor/acl_jackal
+output_path: /media/ameredit/Extreme SSD/output/Gaussian-SLAM/Kimera/outdoor/acl_jackal
 project_name: "Gaussian_SLAM_kimera"
 dataset_name: "kimera"
 checkpoint_path: null
@@ -18,8 +18,8 @@ cy: 238.04495239257812
 depth_scale: 1000.0
 
 data:
-  input_path: /media/annika/Extreme SSD/Kimera-Multi/data/outdoor/acl_jackal
-  output_path: /media/annika/Extreme SSD/output/Gaussian-SLAM/Kimera/outdoor/acl_jackal
+  input_path: /media/ameredit/Extreme SSD/Kimera-Multi/data/outdoor/acl_jackal
+  output_path: /media/ameredit/Extreme SSD/output/Gaussian-SLAM/Kimera/outdoor/acl_jackal
   scene_name: "acl_jackal"
   use_train_split: True
   frame_limit: -1

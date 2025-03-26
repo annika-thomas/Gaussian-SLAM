@@ -1,6 +1,6 @@
 inherit_from: configs/Kimera/kimera.yaml
-input_path: /media/annika/Extreme SSD/Kimera-Multi/data/tunnels/sparkal2
-output_path: /media/annika/Extreme SSD/output/Gaussian-SLAM/Kimera/tunnles/sparkal2
+input_path: /media/ameredit/Extreme SSD/Kimera-Multi/data/tunnels/sparkal2
+output_path: /media/ameredit/Extreme SSD/output/Gaussian-SLAM/Kimera/tunnles/sparkal2
 project_name: "Gaussian_SLAM_kimera"
 dataset_name: "kimera"
 checkpoint_path: null
@@ -18,8 +18,8 @@ cy: 238.04495239257812
 depth_scale: 1000.0
 
 data:
-  input_path: /media/annika/Extreme SSD/Kimera-Multi/data/tunnels/sparkal2
-  output_path: /media/annika/Extreme SSD/output/Gaussian-SLAM/Kimera/tunnels/sparkal2
+  input_path: /media/ameredit/Extreme SSD/Kimera-Multi/data/tunnels/sparkal2
+  output_path: /media/ameredit/Extreme SSD/output/Gaussian-SLAM/Kimera/tunnels/sparkal2
   scene_name: "sparkal2"
   use_train_split: True
   frame_limit: -1
