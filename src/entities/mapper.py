@@ -94,7 +94,12 @@ class Mapper(object):
             if self.new_submap_points_num < 0:
                 uniform_ids = np.arange(pts.shape[0])
             else:
-                uniform_ids = np.random.choice(pts.shape[0], self.new_submap_points_num, replace=False)
+                # uniform_ids = np.random.choice(pts.shape[0], self.new_submap_points_num, replace=False)
+                num_pts = pts.shape[0]
+                num_to_sample = min(num_pts, self.new_submap_points_num)
+                print("num to sample: ", num_to_sample)
+                uniform_ids = np.random.choice(num_pts, num_to_sample, replace=False)
+
             gradient_ids = sample_pixels_based_on_gradient(gt_color, self.new_submap_gradient_points_num)
             combined_ids = np.concatenate((uniform_ids, gradient_ids))
             combined_ids = np.concatenate((combined_ids, valid_ids))
